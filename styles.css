@@ -1,0 +1,64 @@
+:root{
+   --teal-green:#4297a0;
+   --ivory:#f4eae6;
+   --coral:#e57f84;
+   --misty-blue: #2f5061;
+}
+
+*{
+   margin:0;
+   padding: 0;
+}
+body{
+   min-height: 100vh;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   grid-template-columns: 1fr;
+   grid-template-areas: "navbar navbar" "main main" "footer footer";
+}
+
+nav{
+   height: 3rem;
+   top:0; 
+   position: sticky;
+
+   background-color: blue;
+   color: white;
+
+   grid-area: navbar;
+   
+}
+
+aside{
+   height: calc(92vh - 50.4px);
+   top: 3rem;
+
+
+   align-self: start;
+   
+
+   grid-area: sidebar;
+
+   background-color: beige;
+
+   position: fixed;
+   width:300px; 
+   display: none;
+   color: red;
+
+}
+
+main{
+   grid-area: main;
+}
+
+footer{
+   grid-area: footer;
+   background-color: black;
+   color: white;
+   padding: 2em;
+}
+.show{
+   display: block;
+   
+}
